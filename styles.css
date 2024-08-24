@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@100..700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #9b59b6, #9370a1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(16, 11, 11);
+}
+
+.container {
+    background: rgba(246, 242, 242, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(30, 23, 23);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#new-task {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 75%;
+    font-size: 1rem;
+}
+
+#add-task {
+    padding: 10px;
+    border: none;
+    background: #8a12ba;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+#add-task:hover {
+    background: #66337b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(240, 234, 234, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+li span {
+    flex-grow: 1;
+    padding-right: 10px;
+    max-width: 200px; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+li button {
+    background: transparent;
+    border: none;
+    color: rgb(72, 31, 31);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
+
+li button:hover {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#celebration-message {
+    background: rgba(255, 255, 255, 0.8);
+    color: #2ecc71;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes confetti {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    animation: confetti 2s linear infinite;
+    pointer-events: none;
+}
